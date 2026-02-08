@@ -1,0 +1,321 @@
+/* CheckoutPage.css - Stripe-like Premium Design */
+.checkout-page {
+    background: #f6f9fc;
+    /* Stripe grey */
+    min-height: 100vh;
+    padding: 60px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    color: #32325d;
+}
+
+.checkout-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Header & Steps */
+.checkout-header-section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.checkout-steps {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #8898aa;
+}
+
+.step.active {
+    color: #32325d;
+    font-weight: 600;
+}
+
+.step.completed {
+    color: #5e72e4;
+    /* Brand blue */
+}
+
+.step-line {
+    width: 24px;
+    height: 1px;
+    background: #e9ecef;
+}
+
+.step-line.filled {
+    background: #5e72e4;
+}
+
+/* Layout */
+.checkout-content-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+    align-items: start;
+}
+
+@media (max-width: 850px) {
+    .checkout-content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Cards (White Containers) */
+.checkout-form-section,
+.order-summary-section {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px 0 rgba(50, 50, 93, .1), 0 5px 15px 0 rgba(0, 0, 0, .07);
+    padding: 32px;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+/* Form Styles */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #f6f9fc;
+    /* Very subtle separator */
+    padding-bottom: 20px;
+}
+
+.section-header h2,
+.order-summary-section h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #32325d;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.secure-badge {
+    font-size: 12px;
+    color: #2dce89;
+    /* Success green */
+    font-weight: 600;
+    background: rgba(45, 206, 137, 0.1);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 32px;
+}
+
+.form-group h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #8898aa;
+    margin-bottom: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #dee2e6;
+    /* Bootstrap-ish border */
+    border-radius: 4px;
+    font-size: 15px;
+    margin-bottom: 16px;
+    color: #525f7f;
+    transition: all 0.15s ease;
+    box-shadow: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #5e72e4;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+input::placeholder {
+    color: #adb5bd;
+}
+
+/* Modern Card Payment Section - Removed Gradient to be Cleaner */
+.card-mock {
+    background: #f7fafc;
+    /* Very light grey */
+    padding: 24px;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.card-logos {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #525f7f;
+    font-weight: 500;
+}
+
+.logos span {
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+/* Buttons */
+.pay-btn {
+    width: 100%;
+    background: #5e72e4;
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+    transition: all 0.15s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+.pay-btn:hover:not(:disabled) {
+    background: #5365d8;
+    /* Slightly darker */
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+}
+
+.pay-btn:disabled {
+    background: #8898aa;
+    transform: none;
+}
+
+/* Order Summary Items */
+.summary-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f6f9fc;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-item img {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.summary-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #32325d;
+}
+
+.summary-info p {
+    margin: 0;
+    font-size: 13px;
+    color: #8898aa;
+}
+
+.summary-price {
+    display: block;
+    margin-top: 4px !important;
+    font-weight: 600;
+    color: #32325d !important;
+}
+
+/* Totals */
+.summary-totals {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 2px dashed #e9ecef;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #525f7f;
+}
+
+.total-row.final {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e9ecef;
+    font-size: 20px;
+    font-weight: 700;
+    color: #32325d;
+}
+
+/* Error/Success */
+.error-message {
+    background: #fdd1da;
+    color: #f5365c;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.checkout-success {
+    text-align: center;
+    background: white;
+    padding: 60px;
+    max-width: 500px;
+    margin: 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px 0 rgba(50, 50, 93, .1), 0 5px 15px 0 rgba(0, 0, 0, .07);
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: #2dce89;
+    color: white;
+    font-size: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 4px 6px rgba(45, 206, 137, 0.3);
+}
+
+.checkout-success h2 {
+    color: #32325d;
+    margin-bottom: 12px;
+}
+
+.checkout-success p {
+    color: #8898aa;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.home-btn {
+    background: #5e72e4;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}

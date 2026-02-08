@@ -1,0 +1,148 @@
+/* AuthEditorial.css - Simple Minimalist Design */
+.auth-editorial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f8f9fa;
+    /* Soft grey background */
+    font-family: 'Inter', sans-serif;
+    padding: 20px;
+}
+
+/* Hide the complex visual side completely */
+.auth-visual {
+    display: none;
+}
+
+/* Centered Form Card */
+.auth-form-container {
+    width: 100%;
+    max-width: 480px;
+    /* Constrained width */
+    background: white;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow */
+    text-align: center;
+}
+
+.form-wrapper {
+    width: 100%;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.brand-header {
+    margin-bottom: 30px;
+}
+
+.brand-logo {
+    font-size: 28px;
+    font-weight: 900;
+    color: #111;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.form-wrapper h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+    color: #111;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+/* Minimal Inputs */
+.input-group-minimal {
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.input-group-minimal label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.input-group-minimal input {
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    background: #fff;
+    padding: 14px 16px;
+    font-size: 1rem;
+    color: #111;
+    outline: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.input-group-minimal input:focus {
+    border-color: #111;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.btn-auth-editorial {
+    width: 100%;
+    background: #111;
+    color: white;
+    border: none;
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.2s ease;
+}
+
+.btn-auth-editorial:hover {
+    background: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.form-footer a {
+    color: #111;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    background: #ffe3e3;
+    color: #e03131;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    text-align: left;
+}

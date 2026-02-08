@@ -1,0 +1,265 @@
+/* pages/ProductListPage.css - Professional Creative Design */
+
+.product-list-page {
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: #111;
+}
+
+/* 1. Creative Hero (Typography Focused) */
+.shop-hero-creative {
+  padding: 120px 20px 80px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.shop-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease;
+}
+
+.shop-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.shop-title {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  margin: 0 0 24px 0;
+  color: #111;
+}
+
+.shop-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 400;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* 2. Filters & Search (Clean/Minimal) */
+.filters-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.filter-group h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.category-pills {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.category-pill {
+  padding: 8px 20px;
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.category-pill:hover {
+  border-color: #111;
+  color: #111;
+}
+
+.category-pill.active {
+  background: #111;
+  color: white;
+  border-color: #111;
+}
+
+.sort-select {
+  padding: 10px 16px;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  min-width: 200px;
+}
+
+/* 3. Products Grid */
+.products-section {
+  margin-bottom: 100px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.product-count {
+  font-size: 14px;
+  color: #999;
+  font-weight: 400;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  column-gap: 30px;
+  row-gap: 60px;
+}
+
+/* 4. Professional Pagination (Minimal) */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.pagination-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  border-radius: 4px;
+  /* Slight round, mostly square */
+  transition: all 0.2s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #f5f5f5;
+  color: #111;
+}
+
+.pagination-btn.active {
+  background: #111;
+  color: white;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Previous/Next as Text or Icons */
+/* Overriding width for text buttons if used, but number strip is cleaner */
+
+.pagination-dots {
+  color: #999;
+  padding: 0 8px;
+}
+
+/* Loading & Empty States */
+.loading-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.skeleton-card {
+  height: 400px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.no-products {
+  text-align: center;
+  padding: 100px 0;
+  color: #666;
+}
+
+.reset-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #111;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .shop-title {
+    font-size: 2.5rem;
+  }
+
+  .filters-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .category-pills {
+    overflow-x: auto;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    column-gap: 16px;
+    row-gap: 40px;
+  }
+
+  .pagination-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+}
